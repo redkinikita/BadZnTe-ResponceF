@@ -47,9 +47,13 @@ w_LO = 206
 gamm = 3.01
 epsilInf = 6.7
 Faust_Henry_coeff = -0.07**(0.02)
+
+
 n_g = 3.224 ###########
 r_e = 1 ########
 c = 1 #############
+
+
 
 for i in range(1,101):
 
@@ -69,7 +73,7 @@ for i in range(1,101):
 	fig = plt.figure()
 	ax = fig.add_subplot()
 	plt.title(str(i)+' micrometers')
-	ax.semilogy(w, abs(fft.fft(Comp_F)))
+	ax.semilogy(w, fft.fft(Comp_F))
 	name = str(i)+'.png'
 	plt.savefig(name)
 
