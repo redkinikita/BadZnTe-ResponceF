@@ -73,7 +73,7 @@ for i in range(1,101):
 	fig = plt.figure()
 	ax = fig.add_subplot()
 	plt.title(str(i)+' micrometers')
-	ax.semilogy(w, fft.fft(Comp_F))
+	ax.semilogy(w, abs(fft.fft(Comp_F)))
 	name = str(i)+'.png'
 	plt.savefig(name)
 
